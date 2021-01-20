@@ -4,15 +4,15 @@ shape('turtle')
 speed('fastest')
 
 
-def square(side_len=100):
+def square(length=100):
     for i in range(4):
-        forward(side_len)
+        forward(length)
         right(90)
 
 
-def triangle(side_len=100):
+def triangle(length=100):
     for i in range(3):
-        forward(side_len)
+        forward(length)
         right(120)
 
 
@@ -28,4 +28,10 @@ def circles_of_squares():
         right(5)
 
 
-input()
+def spiral(length=45):
+    for i in range(60):
+        length += 5
+        square(length)
+        right(5)
+
+spiral()
